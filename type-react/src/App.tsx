@@ -4,6 +4,7 @@ import ToggleButton from './components/Button.tsx'
 import {Person} from './components/Person.tsx'
 import { NameList } from './components/NameList.tsx'
 import {languages} from './components/languages.ts'
+import {Status} from './components/Status.tsx'
 
 function App() {
   const personName = {
@@ -13,11 +14,13 @@ function App() {
   const personList = [
     {
       first: "Mary Kathleen",
-      last: "Miranda"
+      last: "Miranda",
+      status: 201
     },
     {
       first: "Jeff Lance",
-      last: "Miranda"
+      last: "Miranda",
+      status: 200
     }
   ]
   return (
@@ -35,6 +38,7 @@ function App() {
           }
           <NameList names={personList} />
           <ToggleButton />
+          <Status status={personList} >
       </section>
     </> 
   )
